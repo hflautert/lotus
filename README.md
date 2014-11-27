@@ -1,4 +1,4 @@
 Lotus
 =========
 
-Centos setup and maintance scripts
+Some Centos scripts
