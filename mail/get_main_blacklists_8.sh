@@ -74,7 +74,7 @@ echo -e "\n" >> $resultado
 
 echo "Acesse a $host e veja os demais bloqueios rodando: /usr/scripts/get_other_blacklists.sh" >> $resultado
 
-cat -v $resultado | mail -s "Problemas de envio por blacklists - $host" redes@emailmanager.com
+cat -v $resultado | mail -s "Problemas de envio por blacklists - $host" sysadmin@yourcompany.com
 
 # Limpa temporários
 rm -Rf $dir_temp
