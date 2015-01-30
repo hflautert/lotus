@@ -24,13 +24,13 @@ LOG="/var/log/sincronizacao_$DATA.log"
 
 # Comando de sincronização
 echo "`date` - Inicio da sincronização dos sites com o servidor" >> $LOG
-#rsync --delete -ave "ssh -p $PORTA_SSH -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress $PASTA_LOCAL1 $USUARIO@$SERVIDOR:$PASTA_REMOTA >> $LOG 2>> $LOG
+rsync --delete -ave "ssh -p $PORTA_SSH -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress $PASTA_LOCAL1 $USUARIO@$SERVIDOR:$PASTA_REMOTA >> $LOG 2>> $LOG
 B1=$(echo $?)
 echo "`date` - Fim da sincronização dos sites com o servidor" >> $LOG
 
 
 echo "`date` - Inicio da sincronização dos dados com o servidor" >> $LOG
-#rsync --delete -ave "ssh -p $PORTA_SSH -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress $PASTA_LOCAL2 $USUARIO@$SERVIDOR:$PASTA_REMOTA >> $LOG 2>> $LOG
+rsync --delete -ave "ssh -p $PORTA_SSH -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress $PASTA_LOCAL2 $USUARIO@$SERVIDOR:$PASTA_REMOTA >> $LOG 2>> $LOG
 B2=$(echo $?)
 echo "`date` - Fim da sincronização dos dados com o servidor" >> $LOG
 
@@ -42,7 +42,7 @@ echo "`date` - Fim da sincronização dos bancos de dados com o servidor" >> $LO
 
 
 echo "`date` - Inicio da sincronização das configurações com o servidor" >> $LOG
-#rsync --delete -ave "ssh -p $PORTA_SSH -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress $PASTA_LOCAL4 $USUARIO@$SERVIDOR:$PASTA_REMOTA >> $LOG 2>> $LOG
+rsync --delete -ave "ssh -p $PORTA_SSH -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress $PASTA_LOCAL4 $USUARIO@$SERVIDOR:$PASTA_REMOTA >> $LOG 2>> $LOG
 B4=$(echo $?)
 echo "`date` - Fim da sincronização das configurações com o servidor" >> $LOG
 
