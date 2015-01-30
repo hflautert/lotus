@@ -1,0 +1,40 @@
+#Instalar
+
+yum install mutt *sasl* -y
+
+#Criar configuração e estrutura
+
+cd ~
+vim .muttrc
+Colar o conteúdo:
+set from = "empresa.alertas@gmail.com"
+set realname = "Alertas MBSEC"
+set imap_user = "empresa.alertas@gmail.com"
+set imap_pass = "senha"
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set postponed ="+[Gmail]/Drafts"
+set header_cache =~/.mutt/cache/headers
+set message_cachedir =~/.mutt/cache/bodies
+set certificate_file =~/.mutt/certificates
+set smtp_url = "smtps://empresa.alertas@smtp.gmail.com:465/"
+set smtp_pass = "senha"
+set move = no 
+set imap_keepalive = 900
+
+mkdir -p ~/.mutt/cache/
+
+#Baixar e aceitar certificados
+
+#Testar configuração e aceitar sempre os certificados com a letra a ou s, dependendo do idioma.
+mutt
+
+#Testar envio
+
+echo "...de tudo que rola nos bastidores dos scripts. Abraço do Mutt" | mutt -s "Agora você fica sabendo..." meuemail@empresa.com.br
+
+#Configuração do Bacula
+
+vim /etc/bacula/1bacula-dir-messages.conf
+mailcommand = "mutt -s \"BKP EMPRESA: %t %e of %c %l\" %r"
+service bacula-dir restart

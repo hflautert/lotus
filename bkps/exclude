@@ -1,0 +1,16 @@
+./cgroup
+./dev
+./lost+found
+./media
+./misc
+./mnt
+./net
+./proc
+./srv
+./sys
+./tmp
+./var/lock
+./var/run
+./var/spool/squid
+./var/spool/postfix
+./var/www/sites
