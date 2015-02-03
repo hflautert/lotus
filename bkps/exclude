@@ -14,3 +14,5 @@
 ./var/spool/squid
 ./var/spool/postfix
 ./var/www/sites
+./var/log/messages
+./var/lib/mysql/mysql.sock
