@@ -94,6 +94,3 @@ else
 Backup local realizado com sucesso, detalhes em anexo."
 	echo "$MAIL_CON" | mutt -s "$MAIL_SUB" $MAIL_TO $MAIL_TO2 -a $BKP_LOG
 fi
-
-/sbin/shutdown -h now "BACKUP: Desligando"
-/usr/bin/poweroff
