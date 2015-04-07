@@ -1,4 +1,4 @@
 Lotus
 =========
 
-Some Centos scripts
+Some Centos6 scripts
