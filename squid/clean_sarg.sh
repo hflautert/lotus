@@ -1,6 +1,6 @@
 #!/bin/bash
 # Script para limpeza do SARG
-# henrique.lautert@mbsec.com.br
+# hflautert@gmail.com
 # 13/03/2015
 
 # Calculo de espaco - estimado
