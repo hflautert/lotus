@@ -5,7 +5,7 @@
 # Salve em /usr/local/bin/
 # chmod +x file_bkp_minimal.sh
 # Adicione na /etc/crontab
-# 1  18  *  *  * root  file_bkp_minimal.sh > /dev/null 2>&1
+# 1  18  *  *  * root  /usr/bin/local/file_bkp_minimal.sh > /dev/null 2>&1
 ###
 
 # Configuracao
