@@ -1,8 +1,12 @@
 #!/bin/bash
 # hflautert@gmail.com
-# Add in /etc/crontab
-# 1  18  *  *  * root  file_bkp_minimal.sh > /dev/null 2>&1
 
+### LEIAME
+# Salve em /usr/local/bin/
+# chmod +x file_bkp_minimal.sh
+# Adicione na /etc/crontab
+# 1  18  *  *  * root  file_bkp_minimal.sh > /dev/null 2>&1
+###
 
 # Configuracao
 MANT_BKP="7"
